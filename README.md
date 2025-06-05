@@ -67,7 +67,7 @@ The solution can be customized by modifying the following variables:
 
 The repository includes a GitHub Actions workflow for CI/CD:
 
-- Runs on push to main branch and pull requests
+- Runs on push pull requests to main branch
 - Validates Terraform configuration
 - Performs security scanning with tfsec and Checkov
 - Creates a plan and comments on pull requests
@@ -78,10 +78,3 @@ The repository includes a GitHub Actions workflow for CI/CD:
 - [Architecture Document](docs/architecture.md): Detailed architecture explanation
 - [Implementation Guide](docs/implementation_guide.md): Step-by-step implementation instructions
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
