@@ -8,8 +8,6 @@ Many companies don't need their EC2 instances running 24/7. This solution automa
 
 ## Architecture
 
-![Architecture Diagram](docs/architecture.png)
-
 The solution uses the following AWS services:
 
 - **AWS Lambda**: Executes the code to start and stop EC2 instances
