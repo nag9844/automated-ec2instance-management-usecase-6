@@ -1,0 +1,4 @@
+minimum_severity: HIGH
+exclude:
+  - AWS018  # No S3 access logging
+  - AWS002  # No S3 versioning
