@@ -67,10 +67,10 @@ IAM roles and policies are created to grant the Lambda functions the necessary p
 
 Instances are selected for automatic scheduling based on tags. The default configuration uses:
 
-- **Tag Key**: "Name"
-- **Tag Value**: "Demo Server"
+- **Tag Key**: "test"
+- **Tag Value**: "start-or-stop"
 
-To include an EC2 instance in the scheduling, tag it with `Name=Demo Server`.
+To include an EC2 instance in the scheduling, tag it with `Name=start-or-stop`.
 
 ## Customization
 

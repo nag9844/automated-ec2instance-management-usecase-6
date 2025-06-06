@@ -7,8 +7,8 @@ logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
 # Get environment variables
-TAG_KEY = os.environ.get('TAG_KEY', 'Name')
-TAG_VALUE = os.environ.get('TAG_VALUE', 'Demo Server')
+TAG_KEY = os.environ.get('TAG_KEY', 'test')
+TAG_VALUE = os.environ.get('TAG_VALUE', 'start-or-stop')
 REGION = os.environ.get('REGION', 'ap-south-1')
 
 def lambda_handler(event, context):
