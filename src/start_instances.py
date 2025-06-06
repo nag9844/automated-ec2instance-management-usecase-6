@@ -7,7 +7,7 @@ logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
 # Get environment variables
-TAG_KEY = os.environ.get('TAG_KEY', 'AutoStart')
+TAG_KEY = os.environ.get('TAG_KEY', 'demo-key')
 TAG_VALUE = os.environ.get('TAG_VALUE', 'true')
 REGION = os.environ.get('REGION', 'us-east-1')
 

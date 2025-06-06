@@ -19,7 +19,7 @@ variable "project_name" {
 variable "tag_key" {
   description = "Tag key to identify EC2 instances that should be managed by the scheduler"
   type        = string
-  default     = "AutoStart"
+  default     = "demo-key"
 }
 
 variable "tag_value" {
