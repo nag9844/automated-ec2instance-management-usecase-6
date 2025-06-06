@@ -5,17 +5,21 @@ on:
     branches:
       - main
 
-permissions:
-  contents: read
-  id-token: write
-  pull-requests: write
+# permissions:
+#   contents: read
+#   id-token: write
+#   pull-requests: write
 
 jobs:
   terraform:
     name: "Terraform"
     runs-on: ubuntu-latest
+    permissions:             #
+      contents: write        # Grant write permission specifically for this job
+      pull-requests: write   # Keep pull-requests write for commenting
+      id-token: write        # Keep id-token write for AWS OIDC
   
-  env:
+    env:
       AWS_REGION: ${{ secrets.AWS_REGION || 'ap-south-1' }}
     
     defaults:
