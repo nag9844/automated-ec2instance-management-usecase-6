@@ -50,8 +50,8 @@ For detailed deployment instructions, see the [Implementation Guide](docs/implem
 
 Only instances with a specific tag will be managed by the scheduler. By default, instances need to be tagged with:
 
-- Key: `demo-key`
-- Value: `true`
+- Key: `Name`
+- Value: `Demo Server`
 
 ### Customization
 

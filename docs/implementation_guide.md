@@ -61,12 +61,12 @@ To include EC2 instances in the scheduling:
 1. Select the EC2 instance in the AWS Management Console
 2. Click on "Tags" tab
 3. Add a new tag with:
-   - Key: `demo-key` (or the value specified in `var.tag_key`)
-   - Value: `true` (or the value specified in `var.tag_value`)
+   - Key: `Name` (or the value specified in `var.tag_key`)
+   - Value: `Demo Server` (or the value specified in `var.tag_value`)
 
 Alternatively, add tags using the AWS CLI:
 ```bash
-aws ec2 create-tags --resources i-1234567890abcdef0 --tags Key=demo-key,Value=true
+aws ec2 create-tags --resources i-1234567890abcdef0 --tags Key=Name,Value=Demo Server
 ```
 
 ## Customizing Working Hours

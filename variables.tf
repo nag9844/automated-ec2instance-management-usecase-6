@@ -19,13 +19,13 @@ variable "project_name" {
 variable "tag_key" {
   description = "Tag key to identify EC2 instances that should be managed by the scheduler"
   type        = string
-  default     = "demo-key"
+  default     = "Name"
 }
 
 variable "tag_value" {
   description = "Tag value to identify EC2 instances that should be managed by the scheduler"
   type        = string
-  default     = "true"
+  default     = "Demo Server"
 }
 
 variable "tags" {

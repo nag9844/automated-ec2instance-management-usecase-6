@@ -44,7 +44,7 @@ Two Lambda functions are deployed:
 
 ### 3. EC2 Instances
 
-EC2 instances tagged with a specific key-value pair (default: `demo-key=true`) are managed by the scheduler. Only instances with this tag will be automatically started and stopped.
+EC2 instances tagged with a specific key-value pair (default: `Name=true`) are managed by the scheduler. Only instances with this tag will be automatically started and stopped.
 
 ### 4. IAM Roles and Policies
 
@@ -67,10 +67,10 @@ IAM roles and policies are created to grant the Lambda functions the necessary p
 
 Instances are selected for automatic scheduling based on tags. The default configuration uses:
 
-- **Tag Key**: "demo-key"
-- **Tag Value**: "true"
+- **Tag Key**: "Name"
+- **Tag Value**: "Demo Server"
 
-To include an EC2 instance in the scheduling, tag it with `demo-key=true`.
+To include an EC2 instance in the scheduling, tag it with `Name=Demo Server`.
 
 ## Customization
 
