@@ -12,18 +12,6 @@ TAG_VALUE = os.environ.get('TAG_VALUE', 'true')
 REGION = os.environ.get('REGION', 'ap-south-1')
 
 def lambda_handler(event, context):
-    """
-    Lambda function to start EC2 instances based on tags.
-    This function is triggered by a CloudWatch Events rule at 8:00 AM on weekdays.
-    
-    Args:
-        event: The event dict that contains the parameters passed when the function
-               is invoked (unused in this case as we use environment variables).
-        context: The context in which the function is called.
-        
-    Returns:
-        dict: Response with the instances that were started
-    """
     # Initialize EC2 client
     ec2_client = boto3.client('ec2', region_name=REGION)
     
