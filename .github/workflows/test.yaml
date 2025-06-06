@@ -63,14 +63,12 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/YourGitHubActionsRole # Replace with your actual IAM role ARN
+          role-to-assume: arn:aws:iam::199570228070:role/oidc-demo-role # Replace with your actual IAM role ARN
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
-        with:
-          terraform_version: 1.x.x # Specify your desired Terraform version
-
+        
       - name: Format Terraform code
         run: terraform fmt -recursive
         id: fmt # Add an ID for the format step to refer to its outcome
