@@ -62,6 +62,9 @@ jobs:
           framework: terraform
         continue-on-error: true
       
+      - name: Format Terraform code
+        run: terraform fmt -recursive
+      
       - name: Terraform Init
         id: init
         run: terraform init
