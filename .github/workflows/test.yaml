@@ -8,11 +8,6 @@ on:
     branches:
       - main
 
-# permissions:
-#   contents: read
-#   id-token: write
-#   pull-requests: write
-
 jobs:
   lint-and-security:
     name: Lint and Security Checks
@@ -59,9 +54,9 @@ jobs:
       run:
         shell: bash
 
-    steps: # <--- This `steps` keyword needs to be here, directly under the `terraform` job
+    steps:                          # This `steps` keyword needs to be here, directly under the `terraform` job
       - name: Checkout
-        uses: actions/checkout@v4 # You'll need to checkout the code in this job too
+        uses: actions/checkout@v4   # You'll need to checkout the code in this job too
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
