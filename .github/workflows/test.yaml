@@ -69,7 +69,7 @@ jobs:
         
       - name: Format Terraform code
         run: terraform fmt -recursive
-        id: fmt # Add an ID for the format step to refer to its outcome
+        id: fmt 
 
       - name: Terraform Init
         id: init
