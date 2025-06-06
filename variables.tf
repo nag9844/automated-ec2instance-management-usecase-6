@@ -1,7 +1,7 @@
 variable "aws_region" {
   description = "The AWS region where resources will be created"
   type        = string
-  default     = "us-east-1"
+  default     = "ap-south-1"
 }
 
 variable "environment" {
@@ -19,7 +19,7 @@ variable "project_name" {
 variable "tag_key" {
   description = "Tag key to identify EC2 instances that should be managed by the scheduler"
   type        = string
-  default     = "AutoStart"
+  default     = "demo-key"
 }
 
 variable "tag_value" {
@@ -31,8 +31,8 @@ variable "tag_value" {
 variable "tags" {
   description = "Additional tags to apply to all resources"
   type        = map(string)
-  default     = {
-    Owner       = "Operations"
-    CostCenter  = "IT"
+  default = {
+    Owner      = "Operations"
+    CostCenter = "IT"
   }
 }
