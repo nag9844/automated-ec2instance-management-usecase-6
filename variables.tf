@@ -31,8 +31,8 @@ variable "tag_value" {
 variable "tags" {
   description = "Additional tags to apply to all resources"
   type        = map(string)
-  default     = {
-    Owner       = "Operations"
-    CostCenter  = "IT"
+  default = {
+    Owner      = "Operations"
+    CostCenter = "IT"
   }
 }

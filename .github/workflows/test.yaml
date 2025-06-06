@@ -12,6 +12,9 @@ on:
 
 jobs:
   lint-and-security:
+    name: Lint and Security Checks
+    runs-on: ubuntu-latest 
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -41,6 +44,7 @@ jobs:
     name: "Terraform"
     runs-on: ubuntu-latest
     needs: lint-and-security
+
     permissions:             #
       contents: write        # Grant write permission specifically for this job
       pull-requests: write   # Keep pull-requests write for commenting
@@ -53,6 +57,7 @@ jobs:
       run:
         shell: bash
       
+      steps:
       - name: Format Terraform code
         run: terraform fmt -recursive
       

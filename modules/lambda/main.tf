@@ -1,11 +1,11 @@
 resource "aws_lambda_function" "function" {
-  function_name    = var.function_name
-  description      = var.description
-  handler          = var.handler
-  runtime          = var.runtime
-  timeout          = var.timeout
-  role             = aws_iam_role.lambda_role.arn
-  
+  function_name = var.function_name
+  description   = var.description
+  handler       = var.handler
+  runtime       = var.runtime
+  timeout       = var.timeout
+  role          = aws_iam_role.lambda_role.arn
+
   filename         = "${path.module}/lambda_function.zip"
   source_code_hash = data.archive_file.lambda_zip.output_base64sha256
 
@@ -26,7 +26,7 @@ data "archive_file" "lambda_zip" {
 # IAM role for the Lambda function
 resource "aws_iam_role" "lambda_role" {
   name = "${var.function_name}-role"
-  
+
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
@@ -47,7 +47,7 @@ resource "aws_iam_role" "lambda_role" {
 resource "aws_iam_policy" "lambda_policy" {
   name        = "${var.function_name}-policy"
   description = "Policy for ${var.function_name} Lambda function"
-  
+
   policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
@@ -57,7 +57,7 @@ resource "aws_iam_policy" "lambda_policy" {
         Resource = "*"
       },
       {
-        Action   = [
+        Action = [
           "logs:CreateLogGroup",
           "logs:CreateLogStream",
           "logs:PutLogEvents"
